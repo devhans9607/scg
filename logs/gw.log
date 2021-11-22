@@ -1,0 +1,1056 @@
+2021-11-22 11:43:17.023  INFO [gw,,] 2342 --- [main] com.example.gw.GwApplication             : Starting GwApplication using Java 11.0.12 on MBPRH.local with PID 2342 (/Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw/build/classes/java/main started by hans in /Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw)
+2021-11-22 11:43:17.027  INFO [gw,,] 2342 --- [main] com.example.gw.GwApplication             : No active profile set, falling back to default profiles: default
+2021-11-22 11:43:18.746  INFO [gw,,] 2342 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=925266c3-a626-39ed-80a6-bd4233e4cc3f
+2021-11-22 11:43:20.046  INFO [gw,,] 2342 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2021-11-22 11:43:20.046  INFO [gw,,] 2342 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2021-11-22 11:43:20.047  INFO [gw,,] 2342 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2021-11-22 11:43:20.047  INFO [gw,,] 2342 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2021-11-22 11:43:20.047  INFO [gw,,] 2342 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2021-11-22 11:43:20.047  INFO [gw,,] 2342 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2021-11-22 11:43:20.047  INFO [gw,,] 2342 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2021-11-22 11:43:20.047  INFO [gw,,] 2342 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2021-11-22 11:43:20.047  INFO [gw,,] 2342 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2021-11-22 11:43:20.047  INFO [gw,,] 2342 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2021-11-22 11:43:20.047  INFO [gw,,] 2342 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2021-11-22 11:43:20.047  INFO [gw,,] 2342 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2021-11-22 11:43:20.048  INFO [gw,,] 2342 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2021-11-22 11:43:20.722  INFO [gw,,] 2342 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
+2021-11-22 11:43:21.541  INFO [gw,,] 2342 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080
+2021-11-22 11:43:21.617 ERROR [gw,,] 2342 --- [main] o.s.c.gateway.route.CachingRouteLocator  : Refresh routes error !!!
+
+java.lang.IllegalArgumentException: Unable to find GatewayFilterFactory with name JwtFilter
+	at org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator.loadGatewayFilters(RouteDefinitionRouteLocator.java:130) ~[spring-cloud-gateway-server-3.1.0-RC1.jar:3.1.0-RC1]
+	at org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator.getFilters(RouteDefinitionRouteLocator.java:176) ~[spring-cloud-gateway-server-3.1.0-RC1.jar:3.1.0-RC1]
+	at org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator.convertToRoute(RouteDefinitionRouteLocator.java:117) ~[spring-cloud-gateway-server-3.1.0-RC1.jar:3.1.0-RC1]
+	at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:106) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.tryEmitScalar(FluxFlatMap.java:488) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onNext(FluxFlatMap.java:421) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.drain(FluxMergeSequential.java:432) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.innerComplete(FluxMergeSequential.java:328) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialInner.onSubscribe(FluxMergeSequential.java:552) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:165) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:87) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8469) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onNext(FluxMergeSequential.java:237) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:272) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:230) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onSubscribe(FluxMergeSequential.java:198) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:165) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:87) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8469) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onNext(FluxMergeSequential.java:237) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:272) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:230) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onSubscribe(FluxMergeSequential.java:198) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:165) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:87) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4400) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.Mono.subscribeWith(Mono.java:4515) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4371) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4307) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4279) ~[reactor-core-3.4.12.jar:3.4.12]
+	at org.springframework.cloud.gateway.route.CachingRouteLocator.onApplicationEvent(CachingRouteLocator.java:81) ~[spring-cloud-gateway-server-3.1.0-RC1.jar:3.1.0-RC1]
+	at org.springframework.cloud.gateway.route.CachingRouteLocator.onApplicationEvent(CachingRouteLocator.java:40) ~[spring-cloud-gateway-server-3.1.0-RC1.jar:3.1.0-RC1]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.cloud.gateway.route.RouteRefreshListener.reset(RouteRefreshListener.java:73) ~[spring-cloud-gateway-server-3.1.0-RC1.jar:3.1.0-RC1]
+	at org.springframework.cloud.gateway.route.RouteRefreshListener.onApplicationEvent(RouteRefreshListener.java:50) ~[spring-cloud-gateway-server-3.1.0-RC1.jar:3.1.0-RC1]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:938) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:64) ~[spring-boot-2.6.0.jar:2.6.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730) ~[spring-boot-2.6.0.jar:2.6.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412) ~[spring-boot-2.6.0.jar:2.6.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302) ~[spring-boot-2.6.0.jar:2.6.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.0.jar:2.6.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290) ~[spring-boot-2.6.0.jar:2.6.0]
+	at com.example.gw.GwApplication.main(GwApplication.java:10) ~[main/:na]
+
+2021-11-22 11:43:21.633  INFO [gw,,] 2342 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-22 11:43:21.652 ERROR [gw,,] 2342 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalArgumentException: Unable to find GatewayFilterFactory with name JwtFilter
+	at org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator.loadGatewayFilters(RouteDefinitionRouteLocator.java:130) ~[spring-cloud-gateway-server-3.1.0-RC1.jar:3.1.0-RC1]
+	at org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator.getFilters(RouteDefinitionRouteLocator.java:176) ~[spring-cloud-gateway-server-3.1.0-RC1.jar:3.1.0-RC1]
+	at org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator.convertToRoute(RouteDefinitionRouteLocator.java:117) ~[spring-cloud-gateway-server-3.1.0-RC1.jar:3.1.0-RC1]
+	at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:106) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.tryEmitScalar(FluxFlatMap.java:488) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onNext(FluxFlatMap.java:421) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.drain(FluxMergeSequential.java:432) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.innerComplete(FluxMergeSequential.java:328) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialInner.onSubscribe(FluxMergeSequential.java:552) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:165) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:87) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8469) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onNext(FluxMergeSequential.java:237) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:272) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:230) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onSubscribe(FluxMergeSequential.java:198) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:165) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:87) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8469) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onNext(FluxMergeSequential.java:237) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:272) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:230) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onSubscribe(FluxMergeSequential.java:198) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:165) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:87) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:62) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxDefer.subscribe(FluxDefer.java:54) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8469) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.Flux.blockLast(Flux.java:2644) ~[reactor-core-3.4.12.jar:3.4.12]
+	at org.springframework.cloud.gateway.filter.WeightCalculatorWebFilter.lambda$onApplicationEvent$0(WeightCalculatorWebFilter.java:133) ~[spring-cloud-gateway-server-3.1.0-RC1.jar:3.1.0-RC1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory$DependencyObjectProvider.ifAvailable(DefaultListableBeanFactory.java:2035) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.cloud.gateway.filter.WeightCalculatorWebFilter.onApplicationEvent(WeightCalculatorWebFilter.java:133) ~[spring-cloud-gateway-server-3.1.0-RC1.jar:3.1.0-RC1]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.cloud.gateway.route.RouteRefreshListener.reset(RouteRefreshListener.java:73) ~[spring-cloud-gateway-server-3.1.0-RC1.jar:3.1.0-RC1]
+	at org.springframework.cloud.gateway.route.RouteRefreshListener.onApplicationEvent(RouteRefreshListener.java:50) ~[spring-cloud-gateway-server-3.1.0-RC1.jar:3.1.0-RC1]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:938) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:64) ~[spring-boot-2.6.0.jar:2.6.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730) ~[spring-boot-2.6.0.jar:2.6.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412) ~[spring-boot-2.6.0.jar:2.6.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302) ~[spring-boot-2.6.0.jar:2.6.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.0.jar:2.6.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290) ~[spring-boot-2.6.0.jar:2.6.0]
+	at com.example.gw.GwApplication.main(GwApplication.java:10) ~[main/:na]
+	Suppressed: java.lang.Exception: #block terminated with an error
+		at reactor.core.publisher.BlockingSingleSubscriber.blockingGet(BlockingSingleSubscriber.java:99) ~[reactor-core-3.4.12.jar:3.4.12]
+		at reactor.core.publisher.Flux.blockLast(Flux.java:2645) ~[reactor-core-3.4.12.jar:3.4.12]
+		... 24 common frames omitted
+
+2021-11-22 11:43:51.659  INFO [gw,,] 2342 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Failed to shut down 1 bean with phase value 2147483647 within timeout of 30000ms: [webServerGracefulShutdown]
+2021-11-22 11:44:07.353  INFO [gw,,] 2349 --- [main] com.example.gw.GwApplication             : Starting GwApplication using Java 11.0.12 on MBPRH.local with PID 2349 (/Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw/build/classes/java/main started by hans in /Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw)
+2021-11-22 11:44:07.356  INFO [gw,,] 2349 --- [main] com.example.gw.GwApplication             : No active profile set, falling back to default profiles: default
+2021-11-22 11:44:08.498  INFO [gw,,] 2349 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=925266c3-a626-39ed-80a6-bd4233e4cc3f
+2021-11-22 11:44:09.665  INFO [gw,,] 2349 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2021-11-22 11:44:09.666  INFO [gw,,] 2349 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2021-11-22 11:44:09.666  INFO [gw,,] 2349 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2021-11-22 11:44:09.666  INFO [gw,,] 2349 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2021-11-22 11:44:09.666  INFO [gw,,] 2349 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2021-11-22 11:44:09.666  INFO [gw,,] 2349 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2021-11-22 11:44:09.667  INFO [gw,,] 2349 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2021-11-22 11:44:09.667  INFO [gw,,] 2349 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2021-11-22 11:44:09.667  INFO [gw,,] 2349 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2021-11-22 11:44:09.667  INFO [gw,,] 2349 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2021-11-22 11:44:09.668  INFO [gw,,] 2349 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2021-11-22 11:44:09.668  INFO [gw,,] 2349 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2021-11-22 11:44:09.668  INFO [gw,,] 2349 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2021-11-22 11:44:10.391  INFO [gw,,] 2349 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
+2021-11-22 11:44:11.134  INFO [gw,,] 2349 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080
+2021-11-22 11:44:11.217  INFO [gw,,] 2349 --- [main] com.example.gw.GwApplication             : Started GwApplication in 4.296 seconds (JVM running for 5.036)
+2021-11-22 11:44:57.473  INFO [gw,40b96228ee605c07,40b96228ee605c07] 2349 --- [reactor-http-nio-3] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 61 ms
+2021-11-22 11:46:41.081  INFO [gw,,] 2349 --- [SpringApplicationShutdownHook] o.s.b.w.embedded.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+2021-11-22 11:46:41.084  INFO [gw,,] 2349 --- [netty-shutdown] o.s.b.w.embedded.netty.GracefulShutdown  : Graceful shutdown complete
+2021-11-22 11:46:51.665  INFO [gw,,] 2380 --- [main] com.example.gw.GwApplication             : Starting GwApplication using Java 11.0.12 on MBPRH.local with PID 2380 (/Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw/build/classes/java/main started by hans in /Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw)
+2021-11-22 11:46:51.667  INFO [gw,,] 2380 --- [main] com.example.gw.GwApplication             : No active profile set, falling back to default profiles: default
+2021-11-22 11:46:52.906  INFO [gw,,] 2380 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=02a7e587-38cc-37ef-8445-2d9739e0e056
+2021-11-22 11:46:53.987  INFO [gw,,] 2380 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2021-11-22 11:46:53.988  INFO [gw,,] 2380 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2021-11-22 11:46:53.988  INFO [gw,,] 2380 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2021-11-22 11:46:53.988  INFO [gw,,] 2380 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2021-11-22 11:46:53.988  INFO [gw,,] 2380 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2021-11-22 11:46:53.988  INFO [gw,,] 2380 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2021-11-22 11:46:53.988  INFO [gw,,] 2380 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2021-11-22 11:46:53.988  INFO [gw,,] 2380 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2021-11-22 11:46:53.989  INFO [gw,,] 2380 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2021-11-22 11:46:53.989  INFO [gw,,] 2380 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2021-11-22 11:46:53.989  INFO [gw,,] 2380 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2021-11-22 11:46:53.989  INFO [gw,,] 2380 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2021-11-22 11:46:53.989  INFO [gw,,] 2380 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2021-11-22 11:46:54.622  INFO [gw,,] 2380 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
+2021-11-22 11:46:55.387  INFO [gw,,] 2380 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080
+2021-11-22 11:46:55.460  INFO [gw,,] 2380 --- [main] com.example.gw.GwApplication             : Started GwApplication in 4.255 seconds (JVM running for 5.239)
+2021-11-22 11:47:01.048  INFO [gw,12b16544bb552a1c,12b16544bb552a1c] 2380 --- [reactor-http-nio-2] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 97 ms
+2021-11-22 11:57:02.196  INFO [gw,,] 2380 --- [SpringApplicationShutdownHook] o.s.b.w.embedded.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+2021-11-22 11:57:02.200  INFO [gw,,] 2380 --- [netty-shutdown] o.s.b.w.embedded.netty.GracefulShutdown  : Graceful shutdown complete
+2021-11-22 11:57:08.879  INFO [gw,,] 2442 --- [main] com.example.gw.GwApplication             : Starting GwApplication using Java 11.0.12 on MBPRH.local with PID 2442 (/Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw/build/classes/java/main started by hans in /Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw)
+2021-11-22 11:57:08.882  INFO [gw,,] 2442 --- [main] com.example.gw.GwApplication             : No active profile set, falling back to default profiles: default
+2021-11-22 11:57:10.102  INFO [gw,,] 2442 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=fbf0e674-f660-3ef3-b87f-9d8910d264d2
+2021-11-22 11:57:11.468  INFO [gw,,] 2442 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2021-11-22 11:57:11.469  INFO [gw,,] 2442 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2021-11-22 11:57:11.469  INFO [gw,,] 2442 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2021-11-22 11:57:11.470  INFO [gw,,] 2442 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2021-11-22 11:57:11.470  INFO [gw,,] 2442 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2021-11-22 11:57:11.470  INFO [gw,,] 2442 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2021-11-22 11:57:11.470  INFO [gw,,] 2442 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2021-11-22 11:57:11.471  INFO [gw,,] 2442 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2021-11-22 11:57:11.471  INFO [gw,,] 2442 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2021-11-22 11:57:11.471  INFO [gw,,] 2442 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2021-11-22 11:57:11.471  INFO [gw,,] 2442 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2021-11-22 11:57:11.471  INFO [gw,,] 2442 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2021-11-22 11:57:11.472  INFO [gw,,] 2442 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2021-11-22 11:57:12.182  INFO [gw,,] 2442 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2021-11-22 11:57:12.896  INFO [gw,,] 2442 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080
+2021-11-22 11:57:12.956  INFO [gw,,] 2442 --- [main] com.example.gw.GwApplication             : Started GwApplication in 4.534 seconds (JVM running for 5.743)
+2021-11-22 11:58:10.462  INFO [gw,ded06f49f154c841,ded06f49f154c841] 2442 --- [reactor-http-nio-3] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 79 ms
+2021-11-22 12:06:55.321  INFO [gw,,] 2442 --- [SpringApplicationShutdownHook] o.s.b.w.embedded.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+2021-11-22 12:06:55.328  INFO [gw,,] 2442 --- [netty-shutdown] o.s.b.w.embedded.netty.GracefulShutdown  : Graceful shutdown complete
+2021-11-22 12:07:02.125  INFO [gw,,] 2510 --- [main] com.example.gw.GwApplication             : Starting GwApplication using Java 11.0.12 on MBPRH.local with PID 2510 (/Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw/build/classes/java/main started by hans in /Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw)
+2021-11-22 12:07:02.127  INFO [gw,,] 2510 --- [main] com.example.gw.GwApplication             : No active profile set, falling back to default profiles: default
+2021-11-22 12:07:03.913  INFO [gw,,] 2510 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=02a7e587-38cc-37ef-8445-2d9739e0e056
+2021-11-22 12:07:05.199  INFO [gw,,] 2510 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2021-11-22 12:07:05.199  INFO [gw,,] 2510 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2021-11-22 12:07:05.199  INFO [gw,,] 2510 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2021-11-22 12:07:05.199  INFO [gw,,] 2510 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2021-11-22 12:07:05.199  INFO [gw,,] 2510 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2021-11-22 12:07:05.199  INFO [gw,,] 2510 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2021-11-22 12:07:05.199  INFO [gw,,] 2510 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2021-11-22 12:07:05.199  INFO [gw,,] 2510 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2021-11-22 12:07:05.200  INFO [gw,,] 2510 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2021-11-22 12:07:05.200  INFO [gw,,] 2510 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2021-11-22 12:07:05.200  INFO [gw,,] 2510 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2021-11-22 12:07:05.200  INFO [gw,,] 2510 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2021-11-22 12:07:05.200  INFO [gw,,] 2510 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2021-11-22 12:07:05.871  INFO [gw,,] 2510 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
+2021-11-22 12:07:06.505  INFO [gw,,] 2510 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080
+2021-11-22 12:07:06.563  INFO [gw,,] 2510 --- [main] com.example.gw.GwApplication             : Started GwApplication in 4.88 seconds (JVM running for 6.001)
+2021-11-22 12:08:29.350  INFO [gw,,] 2510 --- [SpringApplicationShutdownHook] o.s.b.w.embedded.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+2021-11-22 12:08:29.354  INFO [gw,,] 2510 --- [netty-shutdown] o.s.b.w.embedded.netty.GracefulShutdown  : Graceful shutdown complete
+2021-11-22 12:08:35.664  INFO [gw,,] 2528 --- [main] com.example.gw.GwApplication             : Starting GwApplication using Java 11.0.12 on MBPRH.local with PID 2528 (/Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw/build/classes/java/main started by hans in /Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw)
+2021-11-22 12:08:35.667  INFO [gw,,] 2528 --- [main] com.example.gw.GwApplication             : No active profile set, falling back to default profiles: default
+2021-11-22 12:08:36.805  INFO [gw,,] 2528 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=02a7e587-38cc-37ef-8445-2d9739e0e056
+2021-11-22 12:08:37.882  INFO [gw,,] 2528 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2021-11-22 12:08:37.883  INFO [gw,,] 2528 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2021-11-22 12:08:37.883  INFO [gw,,] 2528 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2021-11-22 12:08:37.883  INFO [gw,,] 2528 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2021-11-22 12:08:37.883  INFO [gw,,] 2528 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2021-11-22 12:08:37.883  INFO [gw,,] 2528 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2021-11-22 12:08:37.883  INFO [gw,,] 2528 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2021-11-22 12:08:37.883  INFO [gw,,] 2528 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2021-11-22 12:08:37.883  INFO [gw,,] 2528 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2021-11-22 12:08:37.883  INFO [gw,,] 2528 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2021-11-22 12:08:37.883  INFO [gw,,] 2528 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2021-11-22 12:08:37.883  INFO [gw,,] 2528 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2021-11-22 12:08:37.884  INFO [gw,,] 2528 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2021-11-22 12:08:38.514  INFO [gw,,] 2528 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
+2021-11-22 12:08:39.150  INFO [gw,,] 2528 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080
+2021-11-22 12:08:39.209  INFO [gw,,] 2528 --- [main] com.example.gw.GwApplication             : Started GwApplication in 3.968 seconds (JVM running for 4.803)
+2021-11-22 12:09:28.779  INFO [gw,0d1016e8b3461a52,0d1016e8b3461a52] 2528 --- [reactor-http-nio-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 144 ms
+2021-11-22 12:10:02.442  INFO [gw,,] 2528 --- [SpringApplicationShutdownHook] o.s.b.w.embedded.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+2021-11-22 12:10:02.444  INFO [gw,,] 2528 --- [netty-shutdown] o.s.b.w.embedded.netty.GracefulShutdown  : Graceful shutdown complete
+2021-11-22 12:10:09.255  INFO [gw,,] 2559 --- [main] com.example.gw.GwApplication             : Starting GwApplication using Java 11.0.12 on MBPRH.local with PID 2559 (/Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw/build/classes/java/main started by hans in /Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw)
+2021-11-22 12:10:09.257  INFO [gw,,] 2559 --- [main] com.example.gw.GwApplication             : No active profile set, falling back to default profiles: default
+2021-11-22 12:10:10.447  INFO [gw,,] 2559 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=02a7e587-38cc-37ef-8445-2d9739e0e056
+2021-11-22 12:10:11.515  INFO [gw,,] 2559 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2021-11-22 12:10:11.515  INFO [gw,,] 2559 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2021-11-22 12:10:11.515  INFO [gw,,] 2559 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2021-11-22 12:10:11.515  INFO [gw,,] 2559 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2021-11-22 12:10:11.516  INFO [gw,,] 2559 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2021-11-22 12:10:11.516  INFO [gw,,] 2559 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2021-11-22 12:10:11.516  INFO [gw,,] 2559 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2021-11-22 12:10:11.516  INFO [gw,,] 2559 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2021-11-22 12:10:11.516  INFO [gw,,] 2559 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2021-11-22 12:10:11.516  INFO [gw,,] 2559 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2021-11-22 12:10:11.516  INFO [gw,,] 2559 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2021-11-22 12:10:11.516  INFO [gw,,] 2559 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2021-11-22 12:10:11.516  INFO [gw,,] 2559 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2021-11-22 12:10:12.144  INFO [gw,,] 2559 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
+2021-11-22 12:10:12.783  INFO [gw,,] 2559 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080
+2021-11-22 12:10:12.840  INFO [gw,,] 2559 --- [main] com.example.gw.GwApplication             : Started GwApplication in 3.999 seconds (JVM running for 4.813)
+2021-11-22 12:10:14.962  INFO [gw,4e4adb66c32fc434,4e4adb66c32fc434] 2559 --- [reactor-http-nio-2] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 79 ms
+2021-11-22 12:11:16.332  INFO [gw,,] 2559 --- [SpringApplicationShutdownHook] o.s.b.w.embedded.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+2021-11-22 12:11:16.337  INFO [gw,,] 2559 --- [netty-shutdown] o.s.b.w.embedded.netty.GracefulShutdown  : Graceful shutdown complete
+2021-11-22 12:11:22.477  INFO [gw,,] 2570 --- [main] com.example.gw.GwApplication             : Starting GwApplication using Java 11.0.12 on MBPRH.local with PID 2570 (/Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw/build/classes/java/main started by hans in /Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw)
+2021-11-22 12:11:22.479  INFO [gw,,] 2570 --- [main] com.example.gw.GwApplication             : No active profile set, falling back to default profiles: default
+2021-11-22 12:11:23.718  INFO [gw,,] 2570 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=af3063ce-8fed-3971-bb50-e4fef2db582b
+2021-11-22 12:11:24.829  WARN [gw,,] 2570 --- [main] onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'gatewayControllerEndpoint' defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration$GatewayActuatorConfiguration.class]: Unsatisfied dependency expressed through method 'gatewayControllerEndpoint' parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'modifyRequestBodyGatewayFilterFactory' defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration.class]: Unsatisfied dependency expressed through method 'modifyRequestBodyGatewayFilterFactory' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration$EnableWebFluxConfiguration': Unsatisfied dependency expressed through method 'setConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'swaggerWebFluxConfigurer' defined in class path resource [org/springdoc/webflux/ui/SwaggerConfig.class]: Unsatisfied dependency expressed through method 'swaggerWebFluxConfigurer' parameter 3; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'actuatorProvider' defined in class path resource [org/springdoc/webflux/core/SpringDocWebFluxConfiguration$SpringDocWebFluxActuatorConfiguration.class]: Unsatisfied dependency expressed through method 'actuatorProvider' parameter 4; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'webEndpointReactiveHandlerMapping' defined in class path resource [org/springframework/boot/actuate/autoconfigure/endpoint/web/reactive/WebFluxEndpointManagementContextConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.actuate.endpoint.web.reactive.WebFluxEndpointHandlerMapping]: Factory method 'webEndpointReactiveHandlerMapping' threw exception; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'gatewayControllerEndpoint': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2021-11-22 12:11:24.838  WARN [gw,,] 2570 --- [main] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'reactorServerResourceFactory': org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'braveTracer': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+2021-11-22 12:11:24.863  INFO [gw,,] 2570 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-22 12:11:24.880 ERROR [gw,,] 2570 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌─────┐
+|  gatewayControllerEndpoint defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration$GatewayActuatorConfiguration.class]
+↑     ↓
+|  modifyRequestBodyGatewayFilterFactory defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration.class]
+↑     ↓
+|  org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration$EnableWebFluxConfiguration
+↑     ↓
+|  swaggerWebFluxConfigurer defined in class path resource [org/springdoc/webflux/ui/SwaggerConfig.class]
+↑     ↓
+|  actuatorProvider defined in class path resource [org/springdoc/webflux/core/SpringDocWebFluxConfiguration$SpringDocWebFluxActuatorConfiguration.class]
+↑     ↓
+|  webEndpointReactiveHandlerMapping defined in class path resource [org/springframework/boot/actuate/autoconfigure/endpoint/web/reactive/WebFluxEndpointManagementContextConfiguration.class]
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2021-11-22 12:11:49.126  INFO [gw,,] 2575 --- [main] com.example.gw.GwApplication             : Starting GwApplication using Java 11.0.12 on MBPRH.local with PID 2575 (/Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw/build/classes/java/main started by hans in /Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw)
+2021-11-22 12:11:49.129  INFO [gw,,] 2575 --- [main] com.example.gw.GwApplication             : No active profile set, falling back to default profiles: default
+2021-11-22 12:11:50.155  INFO [gw,,] 2575 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=af3063ce-8fed-3971-bb50-e4fef2db582b
+2021-11-22 12:11:51.103  WARN [gw,,] 2575 --- [main] onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'gatewayControllerEndpoint' defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration$GatewayActuatorConfiguration.class]: Unsatisfied dependency expressed through method 'gatewayControllerEndpoint' parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'modifyRequestBodyGatewayFilterFactory' defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration.class]: Unsatisfied dependency expressed through method 'modifyRequestBodyGatewayFilterFactory' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration$EnableWebFluxConfiguration': Unsatisfied dependency expressed through method 'setConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'swaggerWebFluxConfigurer' defined in class path resource [org/springdoc/webflux/ui/SwaggerConfig.class]: Unsatisfied dependency expressed through method 'swaggerWebFluxConfigurer' parameter 3; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'actuatorProvider' defined in class path resource [org/springdoc/webflux/core/SpringDocWebFluxConfiguration$SpringDocWebFluxActuatorConfiguration.class]: Unsatisfied dependency expressed through method 'actuatorProvider' parameter 4; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'webEndpointReactiveHandlerMapping' defined in class path resource [org/springframework/boot/actuate/autoconfigure/endpoint/web/reactive/WebFluxEndpointManagementContextConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.actuate.endpoint.web.reactive.WebFluxEndpointHandlerMapping]: Factory method 'webEndpointReactiveHandlerMapping' threw exception; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'gatewayControllerEndpoint': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2021-11-22 12:11:51.110  WARN [gw,,] 2575 --- [main] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'reactorServerResourceFactory': org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'braveTracer': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+2021-11-22 12:11:51.130  INFO [gw,,] 2575 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-22 12:11:51.144 ERROR [gw,,] 2575 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌─────┐
+|  gatewayControllerEndpoint defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration$GatewayActuatorConfiguration.class]
+↑     ↓
+|  modifyRequestBodyGatewayFilterFactory defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration.class]
+↑     ↓
+|  org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration$EnableWebFluxConfiguration
+↑     ↓
+|  swaggerWebFluxConfigurer defined in class path resource [org/springdoc/webflux/ui/SwaggerConfig.class]
+↑     ↓
+|  actuatorProvider defined in class path resource [org/springdoc/webflux/core/SpringDocWebFluxConfiguration$SpringDocWebFluxActuatorConfiguration.class]
+↑     ↓
+|  webEndpointReactiveHandlerMapping defined in class path resource [org/springframework/boot/actuate/autoconfigure/endpoint/web/reactive/WebFluxEndpointManagementContextConfiguration.class]
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2021-11-22 12:13:49.741  INFO [gw,,] 2603 --- [main] com.example.gw.GwApplication             : Starting GwApplication using Java 11.0.12 on MBPRH.local with PID 2603 (/Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw/build/classes/java/main started by hans in /Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw)
+2021-11-22 12:13:49.744  INFO [gw,,] 2603 --- [main] com.example.gw.GwApplication             : No active profile set, falling back to default profiles: default
+2021-11-22 12:13:51.000  INFO [gw,,] 2603 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=af3063ce-8fed-3971-bb50-e4fef2db582b
+2021-11-22 12:13:52.201  WARN [gw,,] 2603 --- [main] onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'gatewayControllerEndpoint' defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration$GatewayActuatorConfiguration.class]: Unsatisfied dependency expressed through method 'gatewayControllerEndpoint' parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'modifyRequestBodyGatewayFilterFactory' defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration.class]: Unsatisfied dependency expressed through method 'modifyRequestBodyGatewayFilterFactory' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration$EnableWebFluxConfiguration': Unsatisfied dependency expressed through method 'setConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'swaggerWebFluxConfigurer' defined in class path resource [org/springdoc/webflux/ui/SwaggerConfig.class]: Unsatisfied dependency expressed through method 'swaggerWebFluxConfigurer' parameter 3; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'actuatorProvider' defined in class path resource [org/springdoc/webflux/core/SpringDocWebFluxConfiguration$SpringDocWebFluxActuatorConfiguration.class]: Unsatisfied dependency expressed through method 'actuatorProvider' parameter 4; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'webEndpointReactiveHandlerMapping' defined in class path resource [org/springframework/boot/actuate/autoconfigure/endpoint/web/reactive/WebFluxEndpointManagementContextConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.actuate.endpoint.web.reactive.WebFluxEndpointHandlerMapping]: Factory method 'webEndpointReactiveHandlerMapping' threw exception; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'gatewayControllerEndpoint': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2021-11-22 12:13:52.208  WARN [gw,,] 2603 --- [main] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'reactorServerResourceFactory': org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'braveTracer': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+2021-11-22 12:13:52.229  INFO [gw,,] 2603 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-22 12:13:52.242 ERROR [gw,,] 2603 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌─────┐
+|  gatewayControllerEndpoint defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration$GatewayActuatorConfiguration.class]
+↑     ↓
+|  modifyRequestBodyGatewayFilterFactory defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration.class]
+↑     ↓
+|  org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration$EnableWebFluxConfiguration
+↑     ↓
+|  swaggerWebFluxConfigurer defined in class path resource [org/springdoc/webflux/ui/SwaggerConfig.class]
+↑     ↓
+|  actuatorProvider defined in class path resource [org/springdoc/webflux/core/SpringDocWebFluxConfiguration$SpringDocWebFluxActuatorConfiguration.class]
+↑     ↓
+|  webEndpointReactiveHandlerMapping defined in class path resource [org/springframework/boot/actuate/autoconfigure/endpoint/web/reactive/WebFluxEndpointManagementContextConfiguration.class]
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2021-11-22 12:14:08.864  INFO [gw,,] 2609 --- [main] com.example.gw.GwApplication             : Starting GwApplication using Java 11.0.12 on MBPRH.local with PID 2609 (/Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw/build/classes/java/main started by hans in /Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw)
+2021-11-22 12:14:08.866  INFO [gw,,] 2609 --- [main] com.example.gw.GwApplication             : No active profile set, falling back to default profiles: default
+2021-11-22 12:14:09.994  INFO [gw,,] 2609 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=af3063ce-8fed-3971-bb50-e4fef2db582b
+2021-11-22 12:14:11.157  WARN [gw,,] 2609 --- [main] onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'gatewayControllerEndpoint' defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration$GatewayActuatorConfiguration.class]: Unsatisfied dependency expressed through method 'gatewayControllerEndpoint' parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'modifyRequestBodyGatewayFilterFactory' defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration.class]: Unsatisfied dependency expressed through method 'modifyRequestBodyGatewayFilterFactory' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration$EnableWebFluxConfiguration': Unsatisfied dependency expressed through method 'setConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'swaggerWebFluxConfigurer' defined in class path resource [org/springdoc/webflux/ui/SwaggerConfig.class]: Unsatisfied dependency expressed through method 'swaggerWebFluxConfigurer' parameter 3; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'actuatorProvider' defined in class path resource [org/springdoc/webflux/core/SpringDocWebFluxConfiguration$SpringDocWebFluxActuatorConfiguration.class]: Unsatisfied dependency expressed through method 'actuatorProvider' parameter 4; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'webEndpointReactiveHandlerMapping' defined in class path resource [org/springframework/boot/actuate/autoconfigure/endpoint/web/reactive/WebFluxEndpointManagementContextConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.actuate.endpoint.web.reactive.WebFluxEndpointHandlerMapping]: Factory method 'webEndpointReactiveHandlerMapping' threw exception; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'gatewayControllerEndpoint': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2021-11-22 12:14:11.166  WARN [gw,,] 2609 --- [main] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'reactorServerResourceFactory': org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'braveTracer': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+2021-11-22 12:14:11.189  INFO [gw,,] 2609 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-22 12:14:11.204 ERROR [gw,,] 2609 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌─────┐
+|  gatewayControllerEndpoint defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration$GatewayActuatorConfiguration.class]
+↑     ↓
+|  modifyRequestBodyGatewayFilterFactory defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration.class]
+↑     ↓
+|  org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration$EnableWebFluxConfiguration
+↑     ↓
+|  swaggerWebFluxConfigurer defined in class path resource [org/springdoc/webflux/ui/SwaggerConfig.class]
+↑     ↓
+|  actuatorProvider defined in class path resource [org/springdoc/webflux/core/SpringDocWebFluxConfiguration$SpringDocWebFluxActuatorConfiguration.class]
+↑     ↓
+|  webEndpointReactiveHandlerMapping defined in class path resource [org/springframework/boot/actuate/autoconfigure/endpoint/web/reactive/WebFluxEndpointManagementContextConfiguration.class]
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2021-11-22 12:16:57.323  INFO [gw,,] 2623 --- [main] com.example.gw.GwApplication             : Starting GwApplication using Java 11.0.12 on MBPRH.local with PID 2623 (/Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw/build/classes/java/main started by hans in /Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw)
+2021-11-22 12:16:57.327  INFO [gw,,] 2623 --- [main] com.example.gw.GwApplication             : No active profile set, falling back to default profiles: default
+2021-11-22 12:16:58.678  INFO [gw,,] 2623 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=02a7e587-38cc-37ef-8445-2d9739e0e056
+2021-11-22 12:16:59.745  INFO [gw,,] 2623 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2021-11-22 12:16:59.746  INFO [gw,,] 2623 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2021-11-22 12:16:59.747  INFO [gw,,] 2623 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2021-11-22 12:16:59.749  INFO [gw,,] 2623 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2021-11-22 12:16:59.750  INFO [gw,,] 2623 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2021-11-22 12:16:59.750  INFO [gw,,] 2623 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2021-11-22 12:16:59.750  INFO [gw,,] 2623 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2021-11-22 12:16:59.751  INFO [gw,,] 2623 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2021-11-22 12:16:59.751  INFO [gw,,] 2623 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2021-11-22 12:16:59.751  INFO [gw,,] 2623 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2021-11-22 12:16:59.751  INFO [gw,,] 2623 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2021-11-22 12:16:59.751  INFO [gw,,] 2623 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2021-11-22 12:16:59.751  INFO [gw,,] 2623 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2021-11-22 12:17:00.433  INFO [gw,,] 2623 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
+2021-11-22 12:17:01.328  INFO [gw,,] 2623 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080
+2021-11-22 12:17:01.387  INFO [gw,,] 2623 --- [main] com.example.gw.GwApplication             : Started GwApplication in 4.492 seconds (JVM running for 5.159)
+2021-11-22 12:17:03.452  INFO [gw,18bbc854348fc0ee,18bbc854348fc0ee] 2623 --- [reactor-http-nio-2] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 74 ms
+2021-11-22 12:18:17.907  INFO [gw,,] 2623 --- [SpringApplicationShutdownHook] o.s.b.w.embedded.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+2021-11-22 12:18:17.913  INFO [gw,,] 2623 --- [netty-shutdown] o.s.b.w.embedded.netty.GracefulShutdown  : Graceful shutdown complete
+2021-11-22 12:18:24.491  INFO [gw,,] 2635 --- [main] com.example.gw.GwApplication             : Starting GwApplication using Java 11.0.12 on MBPRH.local with PID 2635 (/Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw/build/classes/java/main started by hans in /Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw)
+2021-11-22 12:18:24.495  INFO [gw,,] 2635 --- [main] com.example.gw.GwApplication             : No active profile set, falling back to default profiles: default
+2021-11-22 12:18:25.814  INFO [gw,,] 2635 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=af3063ce-8fed-3971-bb50-e4fef2db582b
+2021-11-22 12:18:26.866  WARN [gw,,] 2635 --- [main] onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'gatewayControllerEndpoint' defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration$GatewayActuatorConfiguration.class]: Unsatisfied dependency expressed through method 'gatewayControllerEndpoint' parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'modifyRequestBodyGatewayFilterFactory' defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration.class]: Unsatisfied dependency expressed through method 'modifyRequestBodyGatewayFilterFactory' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration$EnableWebFluxConfiguration': Unsatisfied dependency expressed through method 'setConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'swaggerWebFluxConfigurer' defined in class path resource [org/springdoc/webflux/ui/SwaggerConfig.class]: Unsatisfied dependency expressed through method 'swaggerWebFluxConfigurer' parameter 3; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'actuatorProvider' defined in class path resource [org/springdoc/webflux/core/SpringDocWebFluxConfiguration$SpringDocWebFluxActuatorConfiguration.class]: Unsatisfied dependency expressed through method 'actuatorProvider' parameter 4; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'webEndpointReactiveHandlerMapping' defined in class path resource [org/springframework/boot/actuate/autoconfigure/endpoint/web/reactive/WebFluxEndpointManagementContextConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.actuate.endpoint.web.reactive.WebFluxEndpointHandlerMapping]: Factory method 'webEndpointReactiveHandlerMapping' threw exception; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'gatewayControllerEndpoint': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2021-11-22 12:18:26.874  WARN [gw,,] 2635 --- [main] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'reactorServerResourceFactory': org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'braveTracer': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+2021-11-22 12:18:26.902  INFO [gw,,] 2635 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-22 12:18:26.927 ERROR [gw,,] 2635 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌─────┐
+|  gatewayControllerEndpoint defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration$GatewayActuatorConfiguration.class]
+↑     ↓
+|  modifyRequestBodyGatewayFilterFactory defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration.class]
+↑     ↓
+|  org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration$EnableWebFluxConfiguration
+↑     ↓
+|  swaggerWebFluxConfigurer defined in class path resource [org/springdoc/webflux/ui/SwaggerConfig.class]
+↑     ↓
+|  actuatorProvider defined in class path resource [org/springdoc/webflux/core/SpringDocWebFluxConfiguration$SpringDocWebFluxActuatorConfiguration.class]
+↑     ↓
+|  webEndpointReactiveHandlerMapping defined in class path resource [org/springframework/boot/actuate/autoconfigure/endpoint/web/reactive/WebFluxEndpointManagementContextConfiguration.class]
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2021-11-22 12:19:06.673  INFO [gw,,] 2652 --- [main] com.example.gw.GwApplication             : Starting GwApplication using Java 11.0.12 on MBPRH.local with PID 2652 (/Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw/build/classes/java/main started by hans in /Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw)
+2021-11-22 12:19:06.676  INFO [gw,,] 2652 --- [main] com.example.gw.GwApplication             : No active profile set, falling back to default profiles: default
+2021-11-22 12:19:07.866  INFO [gw,,] 2652 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e9ccc530-0217-327b-bb6b-5ba00b24b190
+2021-11-22 12:19:08.803  WARN [gw,,] 2652 --- [main] onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'gatewayControllerEndpoint' defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration$GatewayActuatorConfiguration.class]: Unsatisfied dependency expressed through method 'gatewayControllerEndpoint' parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'modifyRequestBodyGatewayFilterFactory' defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration.class]: Unsatisfied dependency expressed through method 'modifyRequestBodyGatewayFilterFactory' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration$EnableWebFluxConfiguration': Unsatisfied dependency expressed through method 'setConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'swaggerWebFluxConfigurer' defined in class path resource [org/springdoc/webflux/ui/SwaggerConfig.class]: Unsatisfied dependency expressed through method 'swaggerWebFluxConfigurer' parameter 3; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'actuatorProvider' defined in class path resource [org/springdoc/webflux/core/SpringDocWebFluxConfiguration$SpringDocWebFluxActuatorConfiguration.class]: Unsatisfied dependency expressed through method 'actuatorProvider' parameter 4; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'webEndpointReactiveHandlerMapping' defined in class path resource [org/springframework/boot/actuate/autoconfigure/endpoint/web/reactive/WebFluxEndpointManagementContextConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.actuate.endpoint.web.reactive.WebFluxEndpointHandlerMapping]: Factory method 'webEndpointReactiveHandlerMapping' threw exception; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'gatewayControllerEndpoint': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2021-11-22 12:19:08.809  WARN [gw,,] 2652 --- [main] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'reactorServerResourceFactory': org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'braveTracer': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+2021-11-22 12:19:08.831  INFO [gw,,] 2652 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-22 12:19:08.845 ERROR [gw,,] 2652 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌─────┐
+|  gatewayControllerEndpoint defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration$GatewayActuatorConfiguration.class]
+↑     ↓
+|  modifyRequestBodyGatewayFilterFactory defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration.class]
+↑     ↓
+|  org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration$EnableWebFluxConfiguration
+↑     ↓
+|  swaggerWebFluxConfigurer defined in class path resource [org/springdoc/webflux/ui/SwaggerConfig.class]
+↑     ↓
+|  actuatorProvider defined in class path resource [org/springdoc/webflux/core/SpringDocWebFluxConfiguration$SpringDocWebFluxActuatorConfiguration.class]
+↑     ↓
+|  webEndpointReactiveHandlerMapping defined in class path resource [org/springframework/boot/actuate/autoconfigure/endpoint/web/reactive/WebFluxEndpointManagementContextConfiguration.class]
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2021-11-22 12:21:47.513  INFO [gw,,] 2670 --- [main] com.example.gw.GwApplication             : Starting GwApplication using Java 11.0.12 on MBPRH.local with PID 2670 (/Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw/build/classes/java/main started by hans in /Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw)
+2021-11-22 12:21:47.516  INFO [gw,,] 2670 --- [main] com.example.gw.GwApplication             : No active profile set, falling back to default profiles: default
+2021-11-22 12:21:49.649  INFO [gw,,] 2670 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=02a7e587-38cc-37ef-8445-2d9739e0e056
+2021-11-22 12:21:51.585  INFO [gw,,] 2670 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2021-11-22 12:21:51.585  INFO [gw,,] 2670 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2021-11-22 12:21:51.585  INFO [gw,,] 2670 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2021-11-22 12:21:51.586  INFO [gw,,] 2670 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2021-11-22 12:21:51.586  INFO [gw,,] 2670 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2021-11-22 12:21:51.586  INFO [gw,,] 2670 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2021-11-22 12:21:51.586  INFO [gw,,] 2670 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2021-11-22 12:21:51.586  INFO [gw,,] 2670 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2021-11-22 12:21:51.586  INFO [gw,,] 2670 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2021-11-22 12:21:51.586  INFO [gw,,] 2670 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2021-11-22 12:21:51.586  INFO [gw,,] 2670 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2021-11-22 12:21:51.586  INFO [gw,,] 2670 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2021-11-22 12:21:51.587  INFO [gw,,] 2670 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2021-11-22 12:21:52.391  INFO [gw,,] 2670 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
+2021-11-22 12:21:53.267  INFO [gw,,] 2670 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080
+2021-11-22 12:21:53.384  INFO [gw,,] 2670 --- [main] com.example.gw.GwApplication             : Started GwApplication in 6.371 seconds (JVM running for 7.23)
+2021-11-22 12:24:28.166  INFO [gw,,] 2670 --- [SpringApplicationShutdownHook] o.s.b.w.embedded.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+2021-11-22 12:24:28.175  INFO [gw,,] 2670 --- [netty-shutdown] o.s.b.w.embedded.netty.GracefulShutdown  : Graceful shutdown complete
+2021-11-22 12:24:34.712  INFO [gw,,] 2712 --- [main] com.example.gw.GwApplication             : Starting GwApplication using Java 11.0.12 on MBPRH.local with PID 2712 (/Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw/build/classes/java/main started by hans in /Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw)
+2021-11-22 12:24:34.714  INFO [gw,,] 2712 --- [main] com.example.gw.GwApplication             : No active profile set, falling back to default profiles: default
+2021-11-22 12:24:35.970  INFO [gw,,] 2712 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f260a0a5-2bc1-351c-b6e4-05fb28dd579b
+2021-11-22 12:24:37.104  WARN [gw,,] 2712 --- [main] onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'gatewayControllerEndpoint' defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration$GatewayActuatorConfiguration.class]: Unsatisfied dependency expressed through method 'gatewayControllerEndpoint' parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'modifyRequestBodyGatewayFilterFactory' defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration.class]: Unsatisfied dependency expressed through method 'modifyRequestBodyGatewayFilterFactory' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration$EnableWebFluxConfiguration': Unsatisfied dependency expressed through method 'setConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'swaggerWebFluxConfigurer' defined in class path resource [org/springdoc/webflux/ui/SwaggerConfig.class]: Unsatisfied dependency expressed through method 'swaggerWebFluxConfigurer' parameter 3; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'actuatorProvider' defined in class path resource [org/springdoc/webflux/core/SpringDocWebFluxConfiguration$SpringDocWebFluxActuatorConfiguration.class]: Unsatisfied dependency expressed through method 'actuatorProvider' parameter 4; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'webEndpointReactiveHandlerMapping' defined in class path resource [org/springframework/boot/actuate/autoconfigure/endpoint/web/reactive/WebFluxEndpointManagementContextConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.actuate.endpoint.web.reactive.WebFluxEndpointHandlerMapping]: Factory method 'webEndpointReactiveHandlerMapping' threw exception; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'gatewayControllerEndpoint': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2021-11-22 12:24:37.116  WARN [gw,,] 2712 --- [main] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'reactorServerResourceFactory': org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'braveTracer': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+2021-11-22 12:24:37.139  INFO [gw,,] 2712 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-22 12:24:37.165 ERROR [gw,,] 2712 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌─────┐
+|  gatewayControllerEndpoint defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration$GatewayActuatorConfiguration.class]
+↑     ↓
+|  modifyRequestBodyGatewayFilterFactory defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration.class]
+↑     ↓
+|  org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration$EnableWebFluxConfiguration
+↑     ↓
+|  swaggerWebFluxConfigurer defined in class path resource [org/springdoc/webflux/ui/SwaggerConfig.class]
+↑     ↓
+|  actuatorProvider defined in class path resource [org/springdoc/webflux/core/SpringDocWebFluxConfiguration$SpringDocWebFluxActuatorConfiguration.class]
+↑     ↓
+|  webEndpointReactiveHandlerMapping defined in class path resource [org/springframework/boot/actuate/autoconfigure/endpoint/web/reactive/WebFluxEndpointManagementContextConfiguration.class]
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2021-11-22 12:25:10.108  INFO [gw,,] 2724 --- [main] com.example.gw.GwApplication             : Starting GwApplication using Java 11.0.12 on MBPRH.local with PID 2724 (/Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw/build/classes/java/main started by hans in /Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw)
+2021-11-22 12:25:10.111  INFO [gw,,] 2724 --- [main] com.example.gw.GwApplication             : No active profile set, falling back to default profiles: default
+2021-11-22 12:25:11.408  INFO [gw,,] 2724 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=0874e49e-fe46-33d6-99e7-76025e7c16c1
+2021-11-22 12:25:12.524  WARN [gw,,] 2724 --- [main] onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'gatewayControllerEndpoint' defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration$GatewayActuatorConfiguration.class]: Unsatisfied dependency expressed through method 'gatewayControllerEndpoint' parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'modifyRequestBodyGatewayFilterFactory' defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration.class]: Unsatisfied dependency expressed through method 'modifyRequestBodyGatewayFilterFactory' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration$EnableWebFluxConfiguration': Unsatisfied dependency expressed through method 'setConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'swaggerWebFluxConfigurer' defined in class path resource [org/springdoc/webflux/ui/SwaggerConfig.class]: Unsatisfied dependency expressed through method 'swaggerWebFluxConfigurer' parameter 3; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'actuatorProvider' defined in class path resource [org/springdoc/webflux/core/SpringDocWebFluxConfiguration$SpringDocWebFluxActuatorConfiguration.class]: Unsatisfied dependency expressed through method 'actuatorProvider' parameter 4; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'webEndpointReactiveHandlerMapping' defined in class path resource [org/springframework/boot/actuate/autoconfigure/endpoint/web/reactive/WebFluxEndpointManagementContextConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.actuate.endpoint.web.reactive.WebFluxEndpointHandlerMapping]: Factory method 'webEndpointReactiveHandlerMapping' threw exception; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'gatewayControllerEndpoint': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2021-11-22 12:25:12.535  WARN [gw,,] 2724 --- [main] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'reactorServerResourceFactory': org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'braveTracer': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+2021-11-22 12:25:12.558  INFO [gw,,] 2724 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-22 12:25:12.579 ERROR [gw,,] 2724 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌─────┐
+|  gatewayControllerEndpoint defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration$GatewayActuatorConfiguration.class]
+↑     ↓
+|  modifyRequestBodyGatewayFilterFactory defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration.class]
+↑     ↓
+|  org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration$EnableWebFluxConfiguration
+↑     ↓
+|  swaggerWebFluxConfigurer defined in class path resource [org/springdoc/webflux/ui/SwaggerConfig.class]
+↑     ↓
+|  actuatorProvider defined in class path resource [org/springdoc/webflux/core/SpringDocWebFluxConfiguration$SpringDocWebFluxActuatorConfiguration.class]
+↑     ↓
+|  webEndpointReactiveHandlerMapping defined in class path resource [org/springframework/boot/actuate/autoconfigure/endpoint/web/reactive/WebFluxEndpointManagementContextConfiguration.class]
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2021-11-22 12:25:22.806  INFO [gw,,] 2734 --- [main] com.example.gw.GwApplication             : Starting GwApplication using Java 11.0.12 on MBPRH.local with PID 2734 (/Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw/build/classes/java/main started by hans in /Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw)
+2021-11-22 12:25:22.810  INFO [gw,,] 2734 --- [main] com.example.gw.GwApplication             : No active profile set, falling back to default profiles: default
+2021-11-22 12:25:24.454  INFO [gw,,] 2734 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=0874e49e-fe46-33d6-99e7-76025e7c16c1
+2021-11-22 12:25:25.791  WARN [gw,,] 2734 --- [main] onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'gatewayControllerEndpoint' defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration$GatewayActuatorConfiguration.class]: Unsatisfied dependency expressed through method 'gatewayControllerEndpoint' parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'modifyRequestBodyGatewayFilterFactory' defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration.class]: Unsatisfied dependency expressed through method 'modifyRequestBodyGatewayFilterFactory' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration$EnableWebFluxConfiguration': Unsatisfied dependency expressed through method 'setConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'swaggerWebFluxConfigurer' defined in class path resource [org/springdoc/webflux/ui/SwaggerConfig.class]: Unsatisfied dependency expressed through method 'swaggerWebFluxConfigurer' parameter 3; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'actuatorProvider' defined in class path resource [org/springdoc/webflux/core/SpringDocWebFluxConfiguration$SpringDocWebFluxActuatorConfiguration.class]: Unsatisfied dependency expressed through method 'actuatorProvider' parameter 4; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'webEndpointReactiveHandlerMapping' defined in class path resource [org/springframework/boot/actuate/autoconfigure/endpoint/web/reactive/WebFluxEndpointManagementContextConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.actuate.endpoint.web.reactive.WebFluxEndpointHandlerMapping]: Factory method 'webEndpointReactiveHandlerMapping' threw exception; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'gatewayControllerEndpoint': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2021-11-22 12:25:25.809  WARN [gw,,] 2734 --- [main] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'reactorServerResourceFactory': org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'braveTracer': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+2021-11-22 12:25:25.837  INFO [gw,,] 2734 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-22 12:25:25.858 ERROR [gw,,] 2734 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌─────┐
+|  gatewayControllerEndpoint defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration$GatewayActuatorConfiguration.class]
+↑     ↓
+|  modifyRequestBodyGatewayFilterFactory defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration.class]
+↑     ↓
+|  org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration$EnableWebFluxConfiguration
+↑     ↓
+|  swaggerWebFluxConfigurer defined in class path resource [org/springdoc/webflux/ui/SwaggerConfig.class]
+↑     ↓
+|  actuatorProvider defined in class path resource [org/springdoc/webflux/core/SpringDocWebFluxConfiguration$SpringDocWebFluxActuatorConfiguration.class]
+↑     ↓
+|  webEndpointReactiveHandlerMapping defined in class path resource [org/springframework/boot/actuate/autoconfigure/endpoint/web/reactive/WebFluxEndpointManagementContextConfiguration.class]
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2021-11-22 12:28:10.914  INFO [gw,,] 2751 --- [main] com.example.gw.GwApplication             : Starting GwApplication using Java 11.0.12 on MBPRH.local with PID 2751 (/Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw/build/classes/java/main started by hans in /Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw)
+2021-11-22 12:28:10.916  INFO [gw,,] 2751 --- [main] com.example.gw.GwApplication             : No active profile set, falling back to default profiles: default
+2021-11-22 12:28:12.315  INFO [gw,,] 2751 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=10e794d4-2f9b-3bec-8fb2-edb18e751bb0
+2021-11-22 12:28:13.611  WARN [gw,,] 2751 --- [main] onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'gatewayControllerEndpoint' defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration$GatewayActuatorConfiguration.class]: Unsatisfied dependency expressed through method 'gatewayControllerEndpoint' parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'modifyRequestBodyGatewayFilterFactory' defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration.class]: Unsatisfied dependency expressed through method 'modifyRequestBodyGatewayFilterFactory' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration$EnableWebFluxConfiguration': Unsatisfied dependency expressed through method 'setConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'swaggerWebFluxConfigurer' defined in class path resource [org/springdoc/webflux/ui/SwaggerConfig.class]: Unsatisfied dependency expressed through method 'swaggerWebFluxConfigurer' parameter 3; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'actuatorProvider' defined in class path resource [org/springdoc/webflux/core/SpringDocWebFluxConfiguration$SpringDocWebFluxActuatorConfiguration.class]: Unsatisfied dependency expressed through method 'actuatorProvider' parameter 4; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'webEndpointReactiveHandlerMapping' defined in class path resource [org/springframework/boot/actuate/autoconfigure/endpoint/web/reactive/WebFluxEndpointManagementContextConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.actuate.endpoint.web.reactive.WebFluxEndpointHandlerMapping]: Factory method 'webEndpointReactiveHandlerMapping' threw exception; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'gatewayControllerEndpoint': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2021-11-22 12:28:13.621  WARN [gw,,] 2751 --- [main] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'reactorServerResourceFactory': org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'braveTracer': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+2021-11-22 12:28:13.646  INFO [gw,,] 2751 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-22 12:28:13.666 ERROR [gw,,] 2751 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌─────┐
+|  gatewayControllerEndpoint defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration$GatewayActuatorConfiguration.class]
+↑     ↓
+|  modifyRequestBodyGatewayFilterFactory defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration.class]
+↑     ↓
+|  org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration$EnableWebFluxConfiguration
+↑     ↓
+|  swaggerWebFluxConfigurer defined in class path resource [org/springdoc/webflux/ui/SwaggerConfig.class]
+↑     ↓
+|  actuatorProvider defined in class path resource [org/springdoc/webflux/core/SpringDocWebFluxConfiguration$SpringDocWebFluxActuatorConfiguration.class]
+↑     ↓
+|  webEndpointReactiveHandlerMapping defined in class path resource [org/springframework/boot/actuate/autoconfigure/endpoint/web/reactive/WebFluxEndpointManagementContextConfiguration.class]
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2021-11-22 12:28:37.190  INFO [gw,,] 2757 --- [main] com.example.gw.GwApplication             : Starting GwApplication using Java 11.0.12 on MBPRH.local with PID 2757 (/Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw/build/classes/java/main started by hans in /Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw)
+2021-11-22 12:28:37.193  INFO [gw,,] 2757 --- [main] com.example.gw.GwApplication             : No active profile set, falling back to default profiles: default
+2021-11-22 12:28:38.739  INFO [gw,,] 2757 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=6a00b6db-fbe2-34f6-854e-933317b1b6ed
+2021-11-22 12:28:39.967  INFO [gw,,] 2757 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2021-11-22 12:28:39.967  INFO [gw,,] 2757 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2021-11-22 12:28:39.967  INFO [gw,,] 2757 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2021-11-22 12:28:39.967  INFO [gw,,] 2757 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2021-11-22 12:28:39.967  INFO [gw,,] 2757 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2021-11-22 12:28:39.968  INFO [gw,,] 2757 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2021-11-22 12:28:39.968  INFO [gw,,] 2757 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2021-11-22 12:28:39.968  INFO [gw,,] 2757 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2021-11-22 12:28:39.968  INFO [gw,,] 2757 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2021-11-22 12:28:39.968  INFO [gw,,] 2757 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2021-11-22 12:28:39.968  INFO [gw,,] 2757 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2021-11-22 12:28:39.969  INFO [gw,,] 2757 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2021-11-22 12:28:39.969  INFO [gw,,] 2757 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2021-11-22 12:28:40.670  INFO [gw,,] 2757 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
+2021-11-22 12:28:41.395  INFO [gw,,] 2757 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080
+2021-11-22 12:28:41.466  INFO [gw,,] 2757 --- [main] com.example.gw.GwApplication             : Started GwApplication in 4.821 seconds (JVM running for 5.753)
+2021-11-22 12:28:44.974  INFO [gw,3f590119b6ba3ffc,3f590119b6ba3ffc] 2757 --- [reactor-http-nio-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 62 ms
+2021-11-22 12:30:02.522  INFO [gw,,] 2757 --- [SpringApplicationShutdownHook] o.s.b.w.embedded.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+2021-11-22 12:30:02.527  INFO [gw,,] 2757 --- [netty-shutdown] o.s.b.w.embedded.netty.GracefulShutdown  : Graceful shutdown complete
+2021-11-22 12:30:08.862  INFO [gw,,] 2777 --- [main] com.example.gw.GwApplication             : Starting GwApplication using Java 11.0.12 on MBPRH.local with PID 2777 (/Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw/build/classes/java/main started by hans in /Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw)
+2021-11-22 12:30:08.864  INFO [gw,,] 2777 --- [main] com.example.gw.GwApplication             : No active profile set, falling back to default profiles: default
+2021-11-22 12:30:10.242  INFO [gw,,] 2777 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=6a00b6db-fbe2-34f6-854e-933317b1b6ed
+2021-11-22 12:30:11.494  INFO [gw,,] 2777 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2021-11-22 12:30:11.494  INFO [gw,,] 2777 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2021-11-22 12:30:11.494  INFO [gw,,] 2777 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2021-11-22 12:30:11.494  INFO [gw,,] 2777 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2021-11-22 12:30:11.494  INFO [gw,,] 2777 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2021-11-22 12:30:11.494  INFO [gw,,] 2777 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2021-11-22 12:30:11.495  INFO [gw,,] 2777 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2021-11-22 12:30:11.495  INFO [gw,,] 2777 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2021-11-22 12:30:11.495  INFO [gw,,] 2777 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2021-11-22 12:30:11.495  INFO [gw,,] 2777 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2021-11-22 12:30:11.495  INFO [gw,,] 2777 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2021-11-22 12:30:11.495  INFO [gw,,] 2777 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2021-11-22 12:30:11.495  INFO [gw,,] 2777 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2021-11-22 12:30:12.189  INFO [gw,,] 2777 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
+2021-11-22 12:30:12.894  INFO [gw,,] 2777 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080
+2021-11-22 12:30:12.961  INFO [gw,,] 2777 --- [main] com.example.gw.GwApplication             : Started GwApplication in 4.567 seconds (JVM running for 5.492)
+2021-11-22 12:30:15.691  INFO [gw,996cc912db8f0451,996cc912db8f0451] 2777 --- [reactor-http-nio-2] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 41 ms
+2021-11-22 14:21:22.772  INFO [gw,,] 2777 --- [SpringApplicationShutdownHook] o.s.b.w.embedded.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+2021-11-22 14:21:22.787  INFO [gw,,] 2777 --- [netty-shutdown] o.s.b.w.embedded.netty.GracefulShutdown  : Graceful shutdown complete
+2021-11-22 14:21:33.181  INFO [gw,,] 3255 --- [main] com.example.gw.GwApplication             : Starting GwApplication using Java 11.0.12 on MBPRH.local with PID 3255 (/Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw/build/classes/java/main started by hans in /Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw)
+2021-11-22 14:21:33.186  INFO [gw,,] 3255 --- [main] com.example.gw.GwApplication             : No active profile set, falling back to default profiles: default
+2021-11-22 14:21:34.917  INFO [gw,,] 3255 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=224f6e95-b752-31d6-8012-02f3e2905170
+2021-11-22 14:21:36.221  WARN [gw,,] 3255 --- [main] onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'gatewayControllerEndpoint' defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration$GatewayActuatorConfiguration.class]: Unsatisfied dependency expressed through method 'gatewayControllerEndpoint' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'nettyWriteResponseFilter' defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration$NettyConfiguration.class]: Unsatisfied dependency expressed through method 'nettyWriteResponseFilter' parameter 0; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'gatewayProperties': Could not bind properties to 'GatewayProperties' : prefix=spring.cloud.gateway, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'spring.cloud.gateway' to org.springframework.cloud.gateway.config.GatewayProperties
+2021-11-22 14:21:36.234  WARN [gw,,] 3255 --- [main] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'reactorServerResourceFactory': org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'braveTracer': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+2021-11-22 14:21:36.269  INFO [gw,,] 3255 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-22 14:21:36.293 ERROR [gw,,] 3255 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Binding to target org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'spring.cloud.gateway' to org.springframework.cloud.gateway.config.GatewayProperties failed:
+
+    Property: spring.cloud.gateway.routes[0].uri
+    Value: null
+    Reason: must not be null
+
+
+Action:
+
+Update your application's configuration
+
+2021-11-22 14:52:22.258  INFO [gw,,] 3783 --- [main] com.example.gw.GwApplication             : Starting GwApplication using Java 11.0.12 on MBPRH.local with PID 3783 (/Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw/build/classes/java/main started by hans in /Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw)
+2021-11-22 14:52:22.260  INFO [gw,,] 3783 --- [main] com.example.gw.GwApplication             : No active profile set, falling back to default profiles: default
+2021-11-22 14:52:23.656  INFO [gw,,] 3783 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=224f6e95-b752-31d6-8012-02f3e2905170
+2021-11-22 14:52:25.072  INFO [gw,,] 3783 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2021-11-22 14:52:25.072  INFO [gw,,] 3783 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2021-11-22 14:52:25.072  INFO [gw,,] 3783 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2021-11-22 14:52:25.072  INFO [gw,,] 3783 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2021-11-22 14:52:25.072  INFO [gw,,] 3783 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2021-11-22 14:52:25.073  INFO [gw,,] 3783 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2021-11-22 14:52:25.073  INFO [gw,,] 3783 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2021-11-22 14:52:25.073  INFO [gw,,] 3783 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2021-11-22 14:52:25.073  INFO [gw,,] 3783 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2021-11-22 14:52:25.073  INFO [gw,,] 3783 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2021-11-22 14:52:25.073  INFO [gw,,] 3783 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2021-11-22 14:52:25.073  INFO [gw,,] 3783 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2021-11-22 14:52:25.073  INFO [gw,,] 3783 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2021-11-22 14:52:25.786  INFO [gw,,] 3783 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
+2021-11-22 14:52:26.559  INFO [gw,,] 3783 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080
+2021-11-22 14:52:26.654 ERROR [gw,,] 3783 --- [main] o.s.c.gateway.route.CachingRouteLocator  : Refresh routes error !!!
+
+java.lang.IllegalArgumentException: Unable to find GatewayFilterFactory with name UserFilter
+	at org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator.loadGatewayFilters(RouteDefinitionRouteLocator.java:130) ~[spring-cloud-gateway-server-3.1.0-RC1.jar:3.1.0-RC1]
+	at org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator.getFilters(RouteDefinitionRouteLocator.java:176) ~[spring-cloud-gateway-server-3.1.0-RC1.jar:3.1.0-RC1]
+	at org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator.convertToRoute(RouteDefinitionRouteLocator.java:117) ~[spring-cloud-gateway-server-3.1.0-RC1.jar:3.1.0-RC1]
+	at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:106) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.tryEmitScalar(FluxFlatMap.java:488) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onNext(FluxFlatMap.java:421) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.drain(FluxMergeSequential.java:432) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.innerComplete(FluxMergeSequential.java:328) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialInner.onSubscribe(FluxMergeSequential.java:552) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:165) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:87) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8469) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onNext(FluxMergeSequential.java:237) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:272) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:230) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onSubscribe(FluxMergeSequential.java:198) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:165) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:87) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8469) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onNext(FluxMergeSequential.java:237) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:272) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:230) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onSubscribe(FluxMergeSequential.java:198) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:165) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:87) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4400) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.Mono.subscribeWith(Mono.java:4515) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4371) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4307) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4279) ~[reactor-core-3.4.12.jar:3.4.12]
+	at org.springframework.cloud.gateway.route.CachingRouteLocator.onApplicationEvent(CachingRouteLocator.java:81) ~[spring-cloud-gateway-server-3.1.0-RC1.jar:3.1.0-RC1]
+	at org.springframework.cloud.gateway.route.CachingRouteLocator.onApplicationEvent(CachingRouteLocator.java:40) ~[spring-cloud-gateway-server-3.1.0-RC1.jar:3.1.0-RC1]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.cloud.gateway.route.RouteRefreshListener.reset(RouteRefreshListener.java:73) ~[spring-cloud-gateway-server-3.1.0-RC1.jar:3.1.0-RC1]
+	at org.springframework.cloud.gateway.route.RouteRefreshListener.onApplicationEvent(RouteRefreshListener.java:50) ~[spring-cloud-gateway-server-3.1.0-RC1.jar:3.1.0-RC1]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:938) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:64) ~[spring-boot-2.6.0.jar:2.6.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730) ~[spring-boot-2.6.0.jar:2.6.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412) ~[spring-boot-2.6.0.jar:2.6.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302) ~[spring-boot-2.6.0.jar:2.6.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.0.jar:2.6.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290) ~[spring-boot-2.6.0.jar:2.6.0]
+	at com.example.gw.GwApplication.main(GwApplication.java:13) ~[main/:na]
+
+2021-11-22 14:52:26.673  INFO [gw,,] 3783 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-22 14:52:26.701 ERROR [gw,,] 3783 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalArgumentException: Unable to find GatewayFilterFactory with name UserFilter
+	at org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator.loadGatewayFilters(RouteDefinitionRouteLocator.java:130) ~[spring-cloud-gateway-server-3.1.0-RC1.jar:3.1.0-RC1]
+	at org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator.getFilters(RouteDefinitionRouteLocator.java:176) ~[spring-cloud-gateway-server-3.1.0-RC1.jar:3.1.0-RC1]
+	at org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator.convertToRoute(RouteDefinitionRouteLocator.java:117) ~[spring-cloud-gateway-server-3.1.0-RC1.jar:3.1.0-RC1]
+	at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:106) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.tryEmitScalar(FluxFlatMap.java:488) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onNext(FluxFlatMap.java:421) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.drain(FluxMergeSequential.java:432) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.innerComplete(FluxMergeSequential.java:328) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialInner.onSubscribe(FluxMergeSequential.java:552) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:165) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:87) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8469) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onNext(FluxMergeSequential.java:237) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:272) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:230) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onSubscribe(FluxMergeSequential.java:198) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:165) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:87) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8469) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onNext(FluxMergeSequential.java:237) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:272) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:230) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onSubscribe(FluxMergeSequential.java:198) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:165) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:87) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:62) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.FluxDefer.subscribe(FluxDefer.java:54) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8469) ~[reactor-core-3.4.12.jar:3.4.12]
+	at reactor.core.publisher.Flux.blockLast(Flux.java:2644) ~[reactor-core-3.4.12.jar:3.4.12]
+	at org.springframework.cloud.gateway.filter.WeightCalculatorWebFilter.lambda$onApplicationEvent$0(WeightCalculatorWebFilter.java:133) ~[spring-cloud-gateway-server-3.1.0-RC1.jar:3.1.0-RC1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory$DependencyObjectProvider.ifAvailable(DefaultListableBeanFactory.java:2035) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.cloud.gateway.filter.WeightCalculatorWebFilter.onApplicationEvent(WeightCalculatorWebFilter.java:133) ~[spring-cloud-gateway-server-3.1.0-RC1.jar:3.1.0-RC1]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.cloud.gateway.route.RouteRefreshListener.reset(RouteRefreshListener.java:73) ~[spring-cloud-gateway-server-3.1.0-RC1.jar:3.1.0-RC1]
+	at org.springframework.cloud.gateway.route.RouteRefreshListener.onApplicationEvent(RouteRefreshListener.java:50) ~[spring-cloud-gateway-server-3.1.0-RC1.jar:3.1.0-RC1]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:938) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:64) ~[spring-boot-2.6.0.jar:2.6.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730) ~[spring-boot-2.6.0.jar:2.6.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412) ~[spring-boot-2.6.0.jar:2.6.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302) ~[spring-boot-2.6.0.jar:2.6.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.0.jar:2.6.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290) ~[spring-boot-2.6.0.jar:2.6.0]
+	at com.example.gw.GwApplication.main(GwApplication.java:13) ~[main/:na]
+	Suppressed: java.lang.Exception: #block terminated with an error
+		at reactor.core.publisher.BlockingSingleSubscriber.blockingGet(BlockingSingleSubscriber.java:99) ~[reactor-core-3.4.12.jar:3.4.12]
+		at reactor.core.publisher.Flux.blockLast(Flux.java:2645) ~[reactor-core-3.4.12.jar:3.4.12]
+		... 24 common frames omitted
+
+2021-11-22 14:52:56.710  INFO [gw,,] 3783 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Failed to shut down 1 bean with phase value 2147483647 within timeout of 30000ms: [webServerGracefulShutdown]
+2021-11-22 14:53:02.479  INFO [gw,,] 3790 --- [main] com.example.gw.GwApplication             : Starting GwApplication using Java 11.0.12 on MBPRH.local with PID 3790 (/Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw/build/classes/java/main started by hans in /Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw)
+2021-11-22 14:53:02.482  INFO [gw,,] 3790 --- [main] com.example.gw.GwApplication             : No active profile set, falling back to default profiles: default
+2021-11-22 14:53:03.883  INFO [gw,,] 3790 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=224f6e95-b752-31d6-8012-02f3e2905170
+2021-11-22 14:53:05.186  INFO [gw,,] 3790 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2021-11-22 14:53:05.186  INFO [gw,,] 3790 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2021-11-22 14:53:05.186  INFO [gw,,] 3790 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2021-11-22 14:53:05.186  INFO [gw,,] 3790 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2021-11-22 14:53:05.186  INFO [gw,,] 3790 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2021-11-22 14:53:05.186  INFO [gw,,] 3790 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2021-11-22 14:53:05.186  INFO [gw,,] 3790 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2021-11-22 14:53:05.186  INFO [gw,,] 3790 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2021-11-22 14:53:05.187  INFO [gw,,] 3790 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2021-11-22 14:53:05.187  INFO [gw,,] 3790 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2021-11-22 14:53:05.187  INFO [gw,,] 3790 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2021-11-22 14:53:05.187  INFO [gw,,] 3790 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2021-11-22 14:53:05.187  INFO [gw,,] 3790 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2021-11-22 14:53:05.855  INFO [gw,,] 3790 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
+2021-11-22 14:53:06.623  INFO [gw,,] 3790 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080
+2021-11-22 14:53:06.728  INFO [gw,,] 3790 --- [main] com.example.gw.GwApplication             : Started GwApplication in 4.745 seconds (JVM running for 5.601)
+2021-11-22 14:56:37.569  INFO [gw,,] 3790 --- [SpringApplicationShutdownHook] o.s.b.w.embedded.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+2021-11-22 14:56:37.576  INFO [gw,,] 3790 --- [netty-shutdown] o.s.b.w.embedded.netty.GracefulShutdown  : Graceful shutdown complete
+2021-11-22 14:56:41.219  INFO [gw,,] 3913 --- [main] com.example.gw.GwApplication             : Starting GwApplication using Java 11.0.12 on MBPRH.local with PID 3913 (/Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw/build/classes/java/main started by hans in /Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw)
+2021-11-22 14:56:41.221  INFO [gw,,] 3913 --- [main] com.example.gw.GwApplication             : No active profile set, falling back to default profiles: default
+2021-11-22 14:56:42.957  INFO [gw,,] 3913 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=224f6e95-b752-31d6-8012-02f3e2905170
+2021-11-22 14:56:44.628  INFO [gw,,] 3913 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2021-11-22 14:56:44.628  INFO [gw,,] 3913 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2021-11-22 14:56:44.629  INFO [gw,,] 3913 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2021-11-22 14:56:44.629  INFO [gw,,] 3913 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2021-11-22 14:56:44.629  INFO [gw,,] 3913 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2021-11-22 14:56:44.629  INFO [gw,,] 3913 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2021-11-22 14:56:44.629  INFO [gw,,] 3913 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2021-11-22 14:56:44.629  INFO [gw,,] 3913 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2021-11-22 14:56:44.629  INFO [gw,,] 3913 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2021-11-22 14:56:44.629  INFO [gw,,] 3913 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2021-11-22 14:56:44.629  INFO [gw,,] 3913 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2021-11-22 14:56:44.630  INFO [gw,,] 3913 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2021-11-22 14:56:44.632  INFO [gw,,] 3913 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2021-11-22 14:56:45.317  INFO [gw,,] 3913 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
+2021-11-22 14:56:46.013  INFO [gw,,] 3913 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080
+2021-11-22 14:56:46.106  INFO [gw,,] 3913 --- [main] com.example.gw.GwApplication             : Started GwApplication in 5.389 seconds (JVM running for 6.171)
+2021-11-22 14:56:48.033  INFO [gw,53c0753bda44327f,53c0753bda44327f] 3913 --- [reactor-http-nio-3] com.example.gw.filter.GlobalFilter       : GlobalFilter baseMessage: Spring Cloud Gateway GlobalFilter
+2021-11-22 14:56:48.036  INFO [gw,53c0753bda44327f,53c0753bda44327f] 3913 --- [reactor-http-nio-3] com.example.gw.filter.GlobalFilter       : GlobalFilter Start: org.springframework.http.server.reactive.ReactorServerHttpRequest@385c9ee9
+2021-11-22 14:56:48.580  INFO [gw,,] 3913 --- [reactor-http-nio-3] com.example.gw.filter.GlobalFilter       : GlobalFilter End: org.springframework.http.server.reactive.ReactorServerHttpResponse@371572cf
+2021-11-22 14:57:03.529  INFO [gw,e43eb7106c961d7c,e43eb7106c961d7c] 3913 --- [reactor-http-nio-3] com.example.gw.filter.GlobalFilter       : GlobalFilter baseMessage: Spring Cloud Gateway GlobalFilter
+2021-11-22 14:57:03.530  INFO [gw,e43eb7106c961d7c,e43eb7106c961d7c] 3913 --- [reactor-http-nio-3] com.example.gw.filter.GlobalFilter       : GlobalFilter Start: org.springframework.http.server.reactive.ReactorServerHttpRequest@5c618e55
+2021-11-22 14:57:03.573  INFO [gw,,] 3913 --- [reactor-http-nio-3] com.example.gw.filter.GlobalFilter       : GlobalFilter End: org.springframework.http.server.reactive.ReactorServerHttpResponse@24c829b9
+2021-11-22 14:57:18.124  INFO [gw,2c9852d8c4dd474b,2c9852d8c4dd474b] 3913 --- [reactor-http-nio-6] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 45 ms
+2021-11-22 14:57:48.540  INFO [gw,,] 3913 --- [SpringApplicationShutdownHook] o.s.b.w.embedded.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+2021-11-22 14:57:48.544  INFO [gw,,] 3913 --- [netty-shutdown] o.s.b.w.embedded.netty.GracefulShutdown  : Graceful shutdown complete
+2021-11-22 14:57:55.380  INFO [gw,,] 3931 --- [main] com.example.gw.GwApplication             : Starting GwApplication using Java 11.0.12 on MBPRH.local with PID 3931 (/Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw/build/classes/java/main started by hans in /Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw)
+2021-11-22 14:57:55.383  INFO [gw,,] 3931 --- [main] com.example.gw.GwApplication             : No active profile set, falling back to default profiles: default
+2021-11-22 14:57:56.786  INFO [gw,,] 3931 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=56537969-f6e2-355f-a5ee-ba48aad73ffd
+2021-11-22 14:57:58.187  INFO [gw,,] 3931 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2021-11-22 14:57:58.187  INFO [gw,,] 3931 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2021-11-22 14:57:58.187  INFO [gw,,] 3931 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2021-11-22 14:57:58.187  INFO [gw,,] 3931 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2021-11-22 14:57:58.187  INFO [gw,,] 3931 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2021-11-22 14:57:58.187  INFO [gw,,] 3931 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2021-11-22 14:57:58.187  INFO [gw,,] 3931 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2021-11-22 14:57:58.188  INFO [gw,,] 3931 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2021-11-22 14:57:58.188  INFO [gw,,] 3931 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2021-11-22 14:57:58.188  INFO [gw,,] 3931 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2021-11-22 14:57:58.188  INFO [gw,,] 3931 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2021-11-22 14:57:58.188  INFO [gw,,] 3931 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2021-11-22 14:57:58.190  INFO [gw,,] 3931 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2021-11-22 14:57:58.862  INFO [gw,,] 3931 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
+2021-11-22 14:57:59.598  INFO [gw,,] 3931 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080
+2021-11-22 14:57:59.690  INFO [gw,,] 3931 --- [main] com.example.gw.GwApplication             : Started GwApplication in 4.733 seconds (JVM running for 5.572)
+2021-11-22 14:58:07.631  INFO [gw,844f65f2369f0ecf,844f65f2369f0ecf] 3931 --- [reactor-http-nio-2] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 89 ms
+2021-11-22 15:00:22.377  INFO [gw,43ea36e8803e83b3,43ea36e8803e83b3] 3931 --- [reactor-http-nio-5] com.example.gw.filter.GlobalFilter       : GlobalFilter baseMessage: Spring Cloud Gateway GlobalFilter
+2021-11-22 15:00:22.380  INFO [gw,43ea36e8803e83b3,43ea36e8803e83b3] 3931 --- [reactor-http-nio-5] com.example.gw.filter.GlobalFilter       : GlobalFilter Start: org.springframework.http.server.reactive.ReactorServerHttpRequest@4fd52090
+2021-11-22 15:00:22.870  INFO [gw,,] 3931 --- [reactor-http-nio-5] com.example.gw.filter.GlobalFilter       : GlobalFilter End: org.springframework.http.server.reactive.ReactorServerHttpResponse@19126d93
+2021-11-22 15:00:48.456  INFO [gw,cd01d877e5a09cd2,cd01d877e5a09cd2] 3931 --- [reactor-http-nio-5] com.example.gw.filter.GlobalFilter       : GlobalFilter baseMessage: Spring Cloud Gateway GlobalFilter
+2021-11-22 15:00:48.457  INFO [gw,cd01d877e5a09cd2,cd01d877e5a09cd2] 3931 --- [reactor-http-nio-5] com.example.gw.filter.GlobalFilter       : GlobalFilter Start: org.springframework.http.server.reactive.ReactorServerHttpRequest@1de8b539
+2021-11-22 15:00:48.481  INFO [gw,,] 3931 --- [reactor-http-nio-5] com.example.gw.filter.GlobalFilter       : GlobalFilter End: org.springframework.http.server.reactive.ReactorServerHttpResponse@5f03e773
+2021-11-22 15:01:05.192  INFO [gw,b8dfc5ff10826317,b8dfc5ff10826317] 3931 --- [reactor-http-nio-5] com.example.gw.filter.GlobalFilter       : GlobalFilter baseMessage: Spring Cloud Gateway GlobalFilter
+2021-11-22 15:01:05.193  INFO [gw,b8dfc5ff10826317,b8dfc5ff10826317] 3931 --- [reactor-http-nio-5] com.example.gw.filter.GlobalFilter       : GlobalFilter Start: org.springframework.http.server.reactive.ReactorServerHttpRequest@316e6653
+2021-11-22 15:01:05.217  INFO [gw,,] 3931 --- [reactor-http-nio-5] com.example.gw.filter.GlobalFilter       : GlobalFilter End: org.springframework.http.server.reactive.ReactorServerHttpResponse@69775c3a
+2021-11-22 15:01:17.899  INFO [gw,222243dcaf16102c,222243dcaf16102c] 3931 --- [reactor-http-nio-5] com.example.gw.filter.GlobalFilter       : GlobalFilter baseMessage: Spring Cloud Gateway GlobalFilter
+2021-11-22 15:01:17.899  INFO [gw,222243dcaf16102c,222243dcaf16102c] 3931 --- [reactor-http-nio-5] com.example.gw.filter.GlobalFilter       : GlobalFilter Start: org.springframework.http.server.reactive.ReactorServerHttpRequest@651a3518
+2021-11-22 15:01:17.933  INFO [gw,,] 3931 --- [reactor-http-nio-5] com.example.gw.filter.GlobalFilter       : GlobalFilter End: org.springframework.http.server.reactive.ReactorServerHttpResponse@25e26eb7
+2021-11-22 15:01:18.241  INFO [gw,f33af6a51ae35ebc,f33af6a51ae35ebc] 3931 --- [reactor-http-nio-5] com.example.gw.filter.GlobalFilter       : GlobalFilter baseMessage: Spring Cloud Gateway GlobalFilter
+2021-11-22 15:01:18.242  INFO [gw,f33af6a51ae35ebc,f33af6a51ae35ebc] 3931 --- [reactor-http-nio-5] com.example.gw.filter.GlobalFilter       : GlobalFilter Start: org.springframework.http.server.reactive.ReactorServerHttpRequest@67fcc8a6
+2021-11-22 15:01:18.270  INFO [gw,,] 3931 --- [reactor-http-nio-5] com.example.gw.filter.GlobalFilter       : GlobalFilter End: org.springframework.http.server.reactive.ReactorServerHttpResponse@34b9deef
+2021-11-22 15:01:18.554  INFO [gw,c92631c81dcb8e7d,c92631c81dcb8e7d] 3931 --- [reactor-http-nio-5] com.example.gw.filter.GlobalFilter       : GlobalFilter baseMessage: Spring Cloud Gateway GlobalFilter
+2021-11-22 15:01:18.555  INFO [gw,c92631c81dcb8e7d,c92631c81dcb8e7d] 3931 --- [reactor-http-nio-5] com.example.gw.filter.GlobalFilter       : GlobalFilter Start: org.springframework.http.server.reactive.ReactorServerHttpRequest@3f8f95
+2021-11-22 15:01:18.577  INFO [gw,,] 3931 --- [reactor-http-nio-5] com.example.gw.filter.GlobalFilter       : GlobalFilter End: org.springframework.http.server.reactive.ReactorServerHttpResponse@369edef3
+2021-11-22 15:01:18.880  INFO [gw,7d0421e54f9120ec,7d0421e54f9120ec] 3931 --- [reactor-http-nio-5] com.example.gw.filter.GlobalFilter       : GlobalFilter baseMessage: Spring Cloud Gateway GlobalFilter
+2021-11-22 15:01:18.881  INFO [gw,7d0421e54f9120ec,7d0421e54f9120ec] 3931 --- [reactor-http-nio-5] com.example.gw.filter.GlobalFilter       : GlobalFilter Start: org.springframework.http.server.reactive.ReactorServerHttpRequest@37a6897e
+2021-11-22 15:01:18.911  INFO [gw,,] 3931 --- [reactor-http-nio-5] com.example.gw.filter.GlobalFilter       : GlobalFilter End: org.springframework.http.server.reactive.ReactorServerHttpResponse@4d9267c3
+2021-11-22 15:01:21.920  INFO [gw,e91cf839ac401b53,e91cf839ac401b53] 3931 --- [reactor-http-nio-5] com.example.gw.filter.GlobalFilter       : GlobalFilter baseMessage: Spring Cloud Gateway GlobalFilter
+2021-11-22 15:01:21.920  INFO [gw,e91cf839ac401b53,e91cf839ac401b53] 3931 --- [reactor-http-nio-5] com.example.gw.filter.GlobalFilter       : GlobalFilter Start: org.springframework.http.server.reactive.ReactorServerHttpRequest@31ad0ac3
+2021-11-22 15:01:21.940  INFO [gw,,] 3931 --- [reactor-http-nio-5] com.example.gw.filter.GlobalFilter       : GlobalFilter End: org.springframework.http.server.reactive.ReactorServerHttpResponse@71842343
+2021-11-22 15:01:38.282  INFO [gw,,] 3931 --- [SpringApplicationShutdownHook] o.s.b.w.embedded.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+2021-11-22 15:01:38.285  INFO [gw,,] 3931 --- [netty-shutdown] o.s.b.w.embedded.netty.GracefulShutdown  : Graceful shutdown complete
+2021-11-22 15:01:44.206  INFO [gw,,] 3951 --- [main] com.example.gw.GwApplication             : Starting GwApplication using Java 11.0.12 on MBPRH.local with PID 3951 (/Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw/build/classes/java/main started by hans in /Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw)
+2021-11-22 15:01:44.209  INFO [gw,,] 3951 --- [main] com.example.gw.GwApplication             : No active profile set, falling back to default profiles: default
+2021-11-22 15:01:45.580  INFO [gw,,] 3951 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=88dcbd8b-4f88-3310-b805-933417cbbc47
+2021-11-22 15:01:47.102  INFO [gw,,] 3951 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2021-11-22 15:01:47.102  INFO [gw,,] 3951 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2021-11-22 15:01:47.102  INFO [gw,,] 3951 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2021-11-22 15:01:47.102  INFO [gw,,] 3951 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2021-11-22 15:01:47.102  INFO [gw,,] 3951 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2021-11-22 15:01:47.102  INFO [gw,,] 3951 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2021-11-22 15:01:47.103  INFO [gw,,] 3951 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2021-11-22 15:01:47.103  INFO [gw,,] 3951 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2021-11-22 15:01:47.103  INFO [gw,,] 3951 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2021-11-22 15:01:47.103  INFO [gw,,] 3951 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2021-11-22 15:01:47.103  INFO [gw,,] 3951 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2021-11-22 15:01:47.103  INFO [gw,,] 3951 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2021-11-22 15:01:47.104  INFO [gw,,] 3951 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2021-11-22 15:01:48.001  INFO [gw,,] 3951 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
+2021-11-22 15:01:48.750  INFO [gw,,] 3951 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080
+2021-11-22 15:01:48.855  INFO [gw,,] 3951 --- [main] com.example.gw.GwApplication             : Started GwApplication in 5.117 seconds (JVM running for 5.999)
+2021-11-22 15:01:51.287  INFO [gw,51ec5c89f5655b5a,51ec5c89f5655b5a] 3951 --- [reactor-http-nio-3] com.example.gw.filter.GlobalFilter       : GlobalFilter baseMessage: Spring Cloud Gateway GlobalFilter
+2021-11-22 15:01:51.289  INFO [gw,51ec5c89f5655b5a,51ec5c89f5655b5a] 3951 --- [reactor-http-nio-3] com.example.gw.filter.GlobalFilter       : GlobalFilter Start: org.springframework.http.server.reactive.ReactorServerHttpRequest@4285eba5
+2021-11-22 15:01:51.765  INFO [gw,,] 3951 --- [reactor-http-nio-3] com.example.gw.filter.GlobalFilter       : GlobalFilter End: org.springframework.http.server.reactive.ReactorServerHttpResponse@35f1ff51
+2021-11-22 15:13:41.601  INFO [gw,,] 3951 --- [SpringApplicationShutdownHook] o.s.b.w.embedded.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+2021-11-22 15:13:41.618  INFO [gw,,] 3951 --- [netty-shutdown] o.s.b.w.embedded.netty.GracefulShutdown  : Graceful shutdown complete
+2021-11-22 15:13:50.262  INFO [gw,,] 4175 --- [main] com.example.gw.GwApplication             : Starting GwApplication using Java 11.0.12 on MBPRH.local with PID 4175 (/Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw/build/classes/java/main started by hans in /Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw)
+2021-11-22 15:13:50.265  INFO [gw,,] 4175 --- [main] com.example.gw.GwApplication             : No active profile set, falling back to default profiles: default
+2021-11-22 15:13:51.729  INFO [gw,,] 4175 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d2462dd2-2cd4-3427-a2fa-70a89b8a46e5
+2021-11-22 15:13:53.301  INFO [gw,,] 4175 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2021-11-22 15:13:53.301  INFO [gw,,] 4175 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2021-11-22 15:13:53.301  INFO [gw,,] 4175 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2021-11-22 15:13:53.302  INFO [gw,,] 4175 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2021-11-22 15:13:53.302  INFO [gw,,] 4175 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2021-11-22 15:13:53.302  INFO [gw,,] 4175 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2021-11-22 15:13:53.302  INFO [gw,,] 4175 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2021-11-22 15:13:53.302  INFO [gw,,] 4175 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2021-11-22 15:13:53.302  INFO [gw,,] 4175 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2021-11-22 15:13:53.302  INFO [gw,,] 4175 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2021-11-22 15:13:53.302  INFO [gw,,] 4175 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2021-11-22 15:13:53.303  INFO [gw,,] 4175 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2021-11-22 15:13:53.303  INFO [gw,,] 4175 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2021-11-22 15:13:54.208  INFO [gw,,] 4175 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
+2021-11-22 15:13:54.801  INFO [gw,,] 4175 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080
+2021-11-22 15:13:54.879  INFO [gw,,] 4175 --- [main] com.example.gw.GwApplication             : Started GwApplication in 5.292 seconds (JVM running for 6.381)
+2021-11-22 15:13:59.000  INFO [gw,23c6a4ce27356635,23c6a4ce27356635] 4175 --- [reactor-http-nio-2] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 77 ms
+2021-11-22 15:17:53.080  INFO [gw,,] 4175 --- [SpringApplicationShutdownHook] o.s.b.w.embedded.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+2021-11-22 15:17:53.084  INFO [gw,,] 4175 --- [netty-shutdown] o.s.b.w.embedded.netty.GracefulShutdown  : Graceful shutdown complete
+2021-11-22 15:17:59.465  INFO [gw,,] 4199 --- [main] com.example.gw.GwApplication             : Starting GwApplication using Java 11.0.12 on MBPRH.local with PID 4199 (/Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw/build/classes/java/main started by hans in /Users/hans/Documents/FACHAE_Doc/study/spring_cloud/gw)
+2021-11-22 15:17:59.468  INFO [gw,,] 4199 --- [main] com.example.gw.GwApplication             : No active profile set, falling back to default profiles: default
+2021-11-22 15:18:00.838  INFO [gw,,] 4199 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d2462dd2-2cd4-3427-a2fa-70a89b8a46e5
+2021-11-22 15:18:02.216  INFO [gw,,] 4199 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2021-11-22 15:18:02.216  INFO [gw,,] 4199 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2021-11-22 15:18:02.216  INFO [gw,,] 4199 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2021-11-22 15:18:02.216  INFO [gw,,] 4199 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2021-11-22 15:18:02.216  INFO [gw,,] 4199 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2021-11-22 15:18:02.216  INFO [gw,,] 4199 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2021-11-22 15:18:02.217  INFO [gw,,] 4199 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2021-11-22 15:18:02.217  INFO [gw,,] 4199 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2021-11-22 15:18:02.217  INFO [gw,,] 4199 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2021-11-22 15:18:02.217  INFO [gw,,] 4199 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2021-11-22 15:18:02.217  INFO [gw,,] 4199 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2021-11-22 15:18:02.217  INFO [gw,,] 4199 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2021-11-22 15:18:02.217  INFO [gw,,] 4199 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2021-11-22 15:18:02.863  INFO [gw,,] 4199 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
+2021-11-22 15:18:03.387  INFO [gw,,] 4199 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080
+2021-11-22 15:18:03.458  INFO [gw,,] 4199 --- [main] com.example.gw.GwApplication             : Started GwApplication in 4.546 seconds (JVM running for 5.742)
+2021-11-22 15:18:08.773  INFO [gw,e3d5c7c665e07553,e3d5c7c665e07553] 4199 --- [reactor-http-nio-2] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 104 ms
