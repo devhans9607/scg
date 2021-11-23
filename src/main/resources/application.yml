@@ -5,71 +5,59 @@ spring.output:
 
 logging:
   file:
-    name: ./logs/${spring.application.name}.log   # /workspace/logs in container #docker exec -it ilware-gw bash
+    name: ./logs/${spring.application.name}.log
   logback.rollingpolicy.max-history: 7
   level:
     root: INFO
     com.innilabs: DEBUG
 server:
+  port: 8080
   shutdown: graceful
-#  forward-headers-strategy: FRAMEWORK ## https://stackoverflow.com/questions/66953605/spring-cloud-gateway-and-springdoc-openapi-integration
-  # use-forward-headers: true
-  error.whitelabel.enabled: false
-
-#springdoc.show-actuator: true
-
+#  forward-headers-strategy: FRAMEWORK # https://stackoverflow.com/questions/66953605/spring-cloud-gateway-and-springdoc-openapi-integration
+#  # use-forward-headers: true
+#  error.whitelabel.enabled: false
+#
+##springdoc.show-actuator: true
+#
 management:
   endpoints:
     web:
       exposure:
         include:
-          - "*"
+          - "gateway"
   endpoint:
     gateway:
       enabled: true
     health:
       show-details: always
 
+#springdoc.api-docs.path : /gw
 
 spring.cloud.gateway:
-  default-filters:
-    - name: GlobalFilter
-      args:
-        baseMessage: Spring Cloud Gateway GlobalFilter
-        preLogger: true
-        postLogger: true
+#  default-filters:
+#    - name: GlobalFilter
+#      args:
+#        baseMessage: Spring Cloud Gateway GlobalFilter
+#        preLogger: true
+#        postLogger: true
   routes:
-    - id: user-service
-      uri: http://localhost:9101
+    - id: openapi
+      uri: http://localhost:${server.port}
       predicates:
-        - Path=/api/v1/board/**
-#      filters:
-#        - name: UserFilter
-#          args:
-#            baseMessage: Taeu UserFilter
-#            preLogger: true
-#            postLogger: true
-
-
-
-#    - id: ilware-sign
-#      predicates:
-#        - Path=/auth/**
-#      uri: http://ilware-sign:8080
-#    - id: ilware-drive
-#      predicates:
-#        - Path=/drive/**
-#      uri: http://ilware-drive:8080
-#      filters:
-#        - JwtFilter
-#    - id: inni-mail
-#      predicates:
-#        - Path=/mail/**
-#      uri: ${app.uri.inni-mail}
-#      #   uri: http://inni-mail:8080
-#      filters:
-#        - name: JwtFilter
-#          args:
-#            enable: true
-
-
+        - Path=/v3/api-docs/**
+      filters:
+        - RewritePath=/v3/api-docs/(?<path>.*), /$\{path}/v3/api-docs
+    - id: board-service
+      uri: lb://board
+      predicates:
+#        - Path=/api/v1/board/**
+        - Path=/board/**
+      filters:
+        - RewritePath=/board/(?<path>.*), /$\{path}
+    - id: board2-service
+      uri: lb://board2
+      predicates:
+        #        - Path=/api/v1/board/**
+        - Path=/board2/**
+      filters:
+        - RewritePath=/board2/(?<path>.*), /$\{path}
