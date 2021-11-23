@@ -34,12 +34,12 @@ management:
 #springdoc.api-docs.path : /gw
 
 spring.cloud.gateway:
-#  default-filters:
-#    - name: GlobalFilter
-#      args:
-#        baseMessage: Spring Cloud Gateway GlobalFilter
-#        preLogger: true
-#        postLogger: true
+  default-filters:
+    - name: GlobalFilter
+      args:
+        baseMessage: Spring Cloud Gateway GlobalFilter
+        preLogger: true
+        postLogger: true
   routes:
     - id: openapi
       uri: http://localhost:${server.port}
@@ -50,14 +50,12 @@ spring.cloud.gateway:
     - id: board-service
       uri: lb://board
       predicates:
-#        - Path=/api/v1/board/**
         - Path=/board/**
       filters:
         - RewritePath=/board/(?<path>.*), /$\{path}
     - id: board2-service
       uri: lb://board2
       predicates:
-        #        - Path=/api/v1/board/**
         - Path=/board2/**
       filters:
         - RewritePath=/board2/(?<path>.*), /$\{path}
