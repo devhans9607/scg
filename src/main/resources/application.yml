@@ -1,5 +1,5 @@
 spring.application:
-  name: gw
+  name: gateway
 spring.output:
   ansi.enabled: always # colorize console logs
 
@@ -47,6 +47,12 @@ spring.cloud.gateway:
         - Path=/v3/api-docs/**
       filters:
         - RewritePath=/v3/api-docs/(?<path>.*), /$\{path}/v3/api-docs
+    - id: ${spring.application.name}-service
+      uri: lb://${spring.application.name}
+      predicates:
+        - Path=/${spring.application.name}/**
+      filters:
+        - RewritePath=/${spring.application.name}/(?<path>.*), /$\{path}
     - id: board-service
       uri: lb://board
       predicates:
@@ -59,3 +65,25 @@ spring.cloud.gateway:
         - Path=/board2/**
       filters:
         - RewritePath=/board2/(?<path>.*), /$\{path}
+
+
+
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+
+eureka:
+  client:
+    enabled: true
+
+---
+spring:
+  config:
+    activate:
+      on-profile: k8s
+
+eureka:
+  client:
+    enabled: false

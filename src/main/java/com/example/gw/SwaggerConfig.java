@@ -92,9 +92,7 @@ public class SwaggerConfig {
 
     //https://stackoverflow.com/questions/43416227/commandlinerunner-and-beans-spring
     @Bean
-    public CommandLineRunner openApiGroups(
-            RouteDefinitionLocator locator,
-            SwaggerUiConfigParameters swaggerUiParameters) {
+    public CommandLineRunner openApiGroups(RouteDefinitionLocator locator, SwaggerUiConfigParameters swaggerUiParameters) {
         return args -> locator
                 .getRouteDefinitions().collectList().block()
                 .stream()
